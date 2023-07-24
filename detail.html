@@ -7,21 +7,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         .score{
-            padding-left: 10vh;
+            /* padding-left: 10vh; */
             text-align: center;
         }
         .fa-solid{
-            font-size: 30pt;
+            /* font-size: 30pt; */
             padding-left: 20px;
-            text-align: center;
+            /* text-align: center; */
         }
         .icon-descript{
             font-size: 5pt;
             padding-left: 3px;
+            white-space : nowrap;
         }
         .symbol-icon{
-            font-size: 20pt;
-            padding-left: 30px;
+            /* font-size: 20pt;
+            padding-left: 30px; */
             cursor: pointer;
         }
         .point{
@@ -43,8 +44,8 @@
             font-size: 15pt;
         }
         body{
-            padding-left: 40px;
-            padding-right: 100px;
+            padding-left: 10px;
+            /* padding-right: 100px; */
         }
         li{
             line-height: 30px;
@@ -61,28 +62,54 @@
             background-clip: content-box;
             border-radius: 20px;
         }
+        .user{
+            /* background-color: #f2f2f2;
+            background-clip: content-box; */
+            /* border-radius: 15px; */
+            display: flex;
+            align-items: center;
+        }
+        .main-photo{
+            /* float: left; */
+            width: 20%;
+            padding-right: 20px;
+        }
     </style>
 </head>
 <body>
     <div style="padding-top: 100px; padding-bottom: 10px;">
-        <img src="image_movie/태극기휘날리며.jpg" alt="" style="float: left; height: 30vh; padding-right: 20px;">
-        <div style="display: flex; align-items: center; border-bottom: 1px solid gray;">
-            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
-            <div class="score">
-                <div style="font-size: 30pt; margin-top: 13px;">4.5</div>
-                평균 별점(2만명)
+        <div style="display: flex; flex-wrap: wrap;">
+            <img src="image_movie/태극기휘날리며.jpg" alt="" class ="main-photo" id = "main-photo">
+            <div style="width: 70%;" id = "main">
+                <h1>태극기 휘날리며</h1>
+                <div style="display: flex; align-items: center; border-bottom: 1px solid gray; flex-wrap: wrap;">
+                    <div class="star" style="display: flex;">
+                        <h1><i class="fa-solid fa-star"></i></h1>
+                        <h1><i class="fa-solid fa-star"></i></h1>
+                        <h1><i class="fa-solid fa-star"></i></h1>
+                        <h1><i class="fa-solid fa-star"></i></h1>
+                        <h1><i class="fa-solid fa-star-half-stroke"></i></h1>
+                        <div class="score">
+                            <h1 style="margin-bottom: 5px;">4.5</h1>
+                            평균 별점(2만명)
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center;">
+                        <h1><i class="fa-solid fa-plus symbol-icon"></i></h1> <span class = "icon-descript">보고싶어요</span>
+                        <h1><i class="fa-solid fa-pen symbol-icon"></i></h1> <span class = "icon-descript">코멘트</span>
+                        <h1><i class="far fa-eye symbol-icon"></i></h1> <span class = "icon-descript">보는중</span>
+                        <h1><i class="fa-solid fa-grip symbol-icon"></i></h1> <span class = "icon-descript">더보기</span>
+                    </div>                
+                </div>
+                <section calss="point">
+                    "우린 반드시 살아서 돌아가야해"<p></p>
+                    가족의 생계를 책임지기 위해 열심히 살아가는 '진태'(장동건)는 약혼녀 '영신'(이은주)과의 결혼과, 세상에서 가장 소중하게 생각하는 동생 '진석'(원빈)의 대학진학을 위해 어려운 상황에서도 씩씩하게 생활을 해나간다.<p></p>
+                    1950년 6월의 어느 날, 한반도에 전쟁이 일어났다는 호회가 배포되고, 두 형제는 평온한 일상에서 갑작스레 전쟁터로 내몰린다. 훈련받을 시간조차 없이 국군 최후의 보루인 낙동강 방어선으로 실전 투입된 '진태'와 '진석'. 동생과 같은 소대에 배치된 '진태'는 아직 학생인 동생의 징집해제를 위해 대대장을 만나게 되고, 동생의 제대를 위해 자신이 해야할 최선의 것이 무엇인지를 느끼게 된다.<p></p>
+                    그리고 동생의 생존을 위해 총을 들며 영웅이 되기를 자처하게 되고, 끝내 생각지도 못한 운명의 덫이 두 형제를 기다리고 있는데...<p></p>
+                </section>
             </div>
-                <i class="fa-solid fa-plus symbol-icon"></i> <span class = "icon-descript">보고싶어요</span>
-                <i class="fa-solid fa-pen symbol-icon"></i> <span class = "icon-descript">코멘트</span>
-                <i class="far fa-eye symbol-icon"></i> <span class = "icon-descript">보는중</span>
-                <i class="fa-solid fa-grip symbol-icon"></i> <span class = "icon-descript">더보기</span>
         </div>
-        <section calss="point">
-            "우린 반드시 살아서 돌아가야해"<p></p>
-            가족의 생계를 책임지기 위해 열심히 살아가는 '진태'(장동건)는 약혼녀 '영신'(이은주)과의 결혼과, 세상에서 가장 소중하게 생각하는 동생 '진석'(원빈)의 대학진학을 위해 어려운 상황에서도 씩씩하게 생활을 해나간다.<p></p>
-            1950년 6월의 어느 날, 한반도에 전쟁이 일어났다는 호회가 배포되고, 두 형제는 평온한 일상에서 갑작스레 전쟁터로 내몰린다. 훈련받을 시간조차 없이 국군 최후의 보루인 낙동강 방어선으로 실전 투입된 '진태'와 '진석'. 동생과 같은 소대에 배치된 '진태'는 아직 학생인 동생의 징집해제를 위해 대대장을 만나게 되고, 동생의 제대를 위해 자신이 해야할 최선의 것이 무엇인지를 느끼게 된다.<p></p>
-            그리고 동생의 생존을 위해 총을 들며 영웅이 되기를 자처하게 되고, 끝내 생각지도 못한 운명의 덫이 두 형제를 기다리고 있는데...<p></p>
-        </section>
+
         <section class="actor" style="clear: left;">
             <h2 style="margin-bottom: 0px; padding-top: 100px;">출연/제작</h2>
             <div class="actor-1">
@@ -187,7 +214,18 @@
                     <li class = "review-li">
                         <div class = "review-box">
                             <div class="user">
-                                <img src="./image_detail/프로필.jpg" alt="" class ="profile" style="border-radius: 30px; width: 50px; height: 50px; float: left;">
+                                <img src="./image_detail/프로필.jpg" alt="" class ="profile" style="border-radius: 30px; width: 50px; height: 50px;">
+                                <div>곰돌이푸</div>
+                            </div>
+                            <div class="review">
+                                미국에 살고있는데 역사시간때 이 영화를 나랑 친구가 적극추천해서 영어자막틀고 다같이봄. 다인종 친구들 다같이엄청움. 백인선생님 감동해서 그날 디비디 바로삼ㅋㅋㅋㅋ그리고 다들 원빈찬양ㅋㅋㅋ 한 다섯번은본듯
+                            </div>
+                        </div>
+                    </li>
+                    <li class = "review-li">
+                        <div class = "review-box">
+                            <div class="user">
+                                <img src="./image_detail/프로필.jpg" alt="" class ="profile" style="border-radius: 30px; width: 50px; height: 50px;">
                                 <div style="float: left;">곰돌이푸</div>
                             </div>
                             <div class="review">
@@ -198,7 +236,7 @@
                     <li class = "review-li">
                         <div class = "review-box">
                             <div class="user">
-                                <img src="./image_detail/프로필.jpg" alt="" class ="profile" style="border-radius: 30px; width: 50px; height: 50px; float: left;">
+                                <img src="./image_detail/프로필.jpg" alt="" class ="profile" style="border-radius: 30px; width: 50px; height: 50px;">
                                 <div style="float: left;">곰돌이푸</div>
                             </div>
                             <div class="review">
@@ -209,18 +247,7 @@
                     <li class = "review-li">
                         <div class = "review-box">
                             <div class="user">
-                                <img src="./image_detail/프로필.jpg" alt="" class ="profile" style="border-radius: 30px; width: 50px; height: 50px; float: left;">
-                                <div style="float: left;">곰돌이푸</div>
-                            </div>
-                            <div class="review">
-                                미국에 살고있는데 역사시간때 이 영화를 나랑 친구가 적극추천해서 영어자막틀고 다같이봄. 다인종 친구들 다같이엄청움. 백인선생님 감동해서 그날 디비디 바로삼ㅋㅋㅋㅋ그리고 다들 원빈찬양ㅋㅋㅋ 한 다섯번은본듯
-                            </div>
-                        </div>
-                    </li>
-                    <li class = "review-li">
-                        <div class = "review-box">
-                            <div class="user">
-                                <img src="./image_detail/프로필.jpg" alt="" class ="profile" style="border-radius: 30px; width: 50px; height: 50px; float: left;">
+                                <img src="./image_detail/프로필.jpg" alt="" class ="profile" style="border-radius: 30px; width: 50px; height: 50px;">
                                 <div style="float: left;">곰돌이푸</div>
                             </div>
                             <div class="review">
@@ -236,4 +263,27 @@
 
     </div>
 </body>
+<script>
+      function adjustDisplay() {
+        if(window.innerWidth < 1430)
+        {
+            document.getElementById('main-photo').style.width = 80 + '%';
+            document.getElementById('main').style.width = 95 + '%';
+            const reviewLiElements = document.getElementsByClassName('review-li');
+            for (const element of reviewLiElements) {
+                element.style.width = '50%';
+            }
+        }
+        else{
+            document.getElementById('main-photo').style.width = 20 + '%';
+            document.getElementById('main').style.width = 70 + '%';
+            const reviewLiElements = document.getElementsByClassName('review-li');
+            for (const element of reviewLiElements) {
+                element.style.width = '25%';
+            }
+        }
+    }
+    adjustDisplay()
+    window.addEventListener('resize', adjustDisplay);
+</script>
 </html>
