@@ -12,7 +12,7 @@
         }
         img{
             width: 250px;
-            height: 320px;
+            height: 300px;
             border-radius: 5px;
         }
         .element{
@@ -209,31 +209,37 @@
     let position = 0;
     let slider_width = slider.lastElementChild.getBoundingClientRect().right - slider.firstElementChild.getBoundingClientRect().left + 100;
     let width = slider_width - window.innerWidth;
-    let move = width/3;
+    let move = 280;
 
 //     function setSlideWidth() {
 //     const slides = slider.getElementsByClassName('slide');
 //     slide_width = slides[slides.length - 1].getBoundingClientRect().right - slides[0].getBoundingClientRect().left;
 //     slider.style.width = slide_width + 'px';
 // }
-
-    console.log(slider_width);
-    console.log(window.innerWidth);
     
     function slideToLeft(buttonElement) {
-        position += move;
-        if (position > 30) {
+        if(position == 0){
             position = -width;
+            buttonElement.parentElement.parentElement.firstElementChild.style.transform = `translateX(${position}px)`;
+            return;
+        }
+        position += move;
+        if (position > 0) {
+            position = 0;
         }
         buttonElement.parentElement.parentElement.firstElementChild.style.transform = `translateX(${position}px)`;
         // slider.style.transform = `translateX(${position}px)`;
     }
 
     function slideToRight(buttonElement) {
-        position -= move;
-        console.log(position);
-        if (position < -(width)) {
+        if(position == -width){
             position = 0;
+            buttonElement.parentElement.parentElement.firstElementChild.style.transform = `translateX(${position}px)`;
+            return;
+        }
+        position -= move;
+        if (position < -width) {
+            position = -width;
         }
         buttonElement.parentElement.parentElement.firstElementChild.style.transform = `translateX(${position}px)`;
         // slider.style.transform = `translateX(${position}px)`;

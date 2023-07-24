@@ -17,8 +17,8 @@
         }
         .d-flex{
           display: flex;
-          position: fixed;
-          right: 10px;
+          /* position: fixed;
+          right: 10px; */
         }
         .jangre-radio{
           margin-left: 10px;
@@ -45,6 +45,8 @@
               <li class="nav-item">
                 <a class="nav-link" href="comic.html" target="view">웹툰</a>
               </li>
+              <li id="margin">
+              </li>
               <li class="nav-item">
                 <form class="d-flex" role="search">
                   <input class="form-control me-2" type="search" placeholder="" aria-label="Search" style="width: 20vh;">
@@ -57,9 +59,13 @@
                       <li ><input type="radio" name="chk_info" value="스릴러" class="jangre-radio">스릴러<input type="radio" name="chk_info" value="다큐" class="jangre-radio">다큐</li>
                     </ul>
                   </li>
-                  <button type="button" class="btn btn-light">Login</button>
-                  <button type="button" class="btn btn-light">회원가입</button>
                 </form>
+                <li class="nav-item">
+                  <button type="button" class="btn btn-light">Login</button>
+                </li>
+                <li class="nav-item">
+                  <button type="button" class="btn btn-light">회원가입</button>
+                </li>
               </li>
               <!-- <li class="nav-item">
                 <button type="button" class="btn btn-light">Login</button>
@@ -99,11 +105,17 @@
       var newHeight = contentHeight + 50; // 컨텐츠 높이보다 50픽셀 더 크게 설정
       iframe.style.height = (newHeight > minHeight ? newHeight : minHeight) + 'px';
   }
+  function adjustMarginWidth() {
+      var margin = document.getElementById('margin');
+      margin.style.width = (window.innerWidth - 980) / window.innerWidth * 100 + 'vw';
+  }
 
   // 초기에 함수 호출
   adjustIframeHeight();
+  adjustMarginWidth()
 
   // 창 크기 조정시에도 함수를 호출
   window.addEventListener('resize', adjustIframeHeight);
+  window.addEventListener('resize', adjustMarginWidth);
 </script>
 </html>
