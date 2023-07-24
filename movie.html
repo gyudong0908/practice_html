@@ -6,22 +6,17 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        .main{
-            display: flex;
-            padding-left: 10px;
-            padding-bottom: 20px;
-        }
         .jangre{
             padding-left: 10px;
             font-size: 20pt;
         }
         img{
-            width: 150px;
-            height: 200px;
+            width: 250px;
+            height: 320px;
             border-radius: 5px;
         }
         .element{
-            width: 150px;
+            width: 250px;
             padding-right: 30px;
         }
         a{
@@ -33,41 +28,216 @@
             overflow: hidden; 
             white-space: nowrap;
         }
+        .slider-container {
+            position: relative;
+            width: 95%;
+            overflow: hidden;
+            padding-left: 10px;
+            padding-bottom: 20px;
+        }
+        .slider-wrapper {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .slide {
+            display: flex;
+        }
+        .content {
+            height: 200px;
+            margin: 10px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+        }
+        .slider-controls {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            width: 95%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .slider-controls button {
+            padding: 5px 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #ddd;
+            border: none;
+            border-radius: 5px;
+        }
+        .slider-controls button:hover {
+            background-color: #ccc;
+        }
     </style>
 </head>
 <body>
     <div class="jangre" style="padding-top: 100px;">전쟁 영화</div>
-    <div class="main">
-        <a href="detail.html" target="view">
-            <div class="element">
-                <img src="image_movie/태극기휘날리며.jpg" alt="">
-                <div class ="title">태극기 휘날리며</div>
-                <div class="make-year">2004 ・ 한국</div>
-                <span>평균</span> <i class="fa-regular fa-star-half-stroke"></i> <span>3.5</span>
+    <div class="slider-container" id="slider-container">
+        <div class="slider-wrapper">
+            <div class="slide" id ="slider">
+                <a href="detail.html" target="view">
+                    <div class="element">
+                        <img src="image_movie/태극기휘날리며.jpg" alt="">
+                        <div class ="title">태극기 휘날리며</div>
+                        <div class="make-year">2004 ・ 한국</div>
+                        <span>평균</span> <i class="fa-regular fa-star-half-stroke"></i> <span>3.5</span>
+                    </div>
+                </a>
+                <div class="element">
+                    <img src="image_movie/태극기휘날리며.jpg" alt="">
+                    <div class ="title">태극기 휘날리며</div>
+                    <div class="make-year">2004 ・ 한국</div>
+                    <span>평균</span> <i class="fa-regular fa-star-half-stroke"></i> <span>3.5</span>
+                </div>
+                <div class="element">
+                    <img src="image_movie/태극기휘날리며.jpg" alt="">
+                    <div class ="title">태극기 휘날리며</div>
+                    <div class="make-year">2004 ・ 한국</div>
+                    <span>평균</span> <i class="fa-regular fa-star-half-stroke"></i> <span>3.5</span>
+                </div>
+                <div class="element">
+                    <img src="image_movie/태극기휘날리며.jpg" alt="">
+                    <div class ="title">태극기 휘날리며</div>
+                    <div class="make-year">2004 ・ 한국</div>
+                    <span>평균</span> <i class="fa-regular fa-star-half-stroke"></i> <span>3.5</span>
+                </div>
+                <div class="element">
+                    <img src="image_movie/태극기휘날리며.jpg" alt="">
+                    <div class ="title">태극기 휘날리며</div>
+                    <div class="make-year">2004 ・ 한국</div>
+                    <span>평균</span> <i class="fa-regular fa-star-half-stroke"></i> <span>3.5</span>
+                </div>
+                <div class="element">
+                    <img src="image_movie/태극기휘날리며.jpg" alt="">
+                    <div class ="title">태극기 휘날리며</div>
+                    <div class="make-year">2004 ・ 한국</div>
+                    <span>평균</span> <i class="fa-regular fa-star-half-stroke"></i> <span>3.5</span>
+                </div>
+                <div class="element">
+                    <img src="image_movie/태극기휘날리며.jpg" alt="">
+                    <div class ="title">태극기 휘날리며</div>
+                    <div class="make-year">2004 ・ 한국</div>
+                    <span>평균</span> <i class="fa-regular fa-star-half-stroke"></i> <span>3.5</span>
+                </div>
+                <div class="element">
+                    <img src="image_movie/태극기휘날리며.jpg" alt="">
+                    <div class ="title">태극기 휘날리며</div>
+                    <div class="make-year">2004 ・ 한국</div>
+                    <span>평균</span> <i class="fa-regular fa-star-half-stroke"></i> <span>3.5</span>
+                </div>
+                <div class="element">
+                    <img src="image_movie/태극기휘날리며.jpg" alt="">
+                    <div class ="title">태극기 휘날리며</div>
+                    <div class="make-year">2004 ・ 한국</div>
+                    <span>평균</span> <i class="fa-regular fa-star-half-stroke"></i> <span>3.5</span>
+                </div>
             </div>
-        </a>
-        <div class="element">
-            <img src="image_movie/태극기휘날리며.jpg" alt="">
-            <div class ="title">태극기 휘날리며</div>
-            <div class="make-year">2004 ・ 한국</div>
-            <span>평균</span> <i class="fa-regular fa-star-half-stroke"></i> <span>3.5</span>
+        </div>
+        <div class="slider-controls">
+            <button onclick="slideToLeft(this)">&lt;</button>
+            <button onclick="slideToRight(this)">&gt;</button>
         </div>
     </div>
-    <div class="jangre">전쟁 영화</div>
-    <div class="main">
-        <div class="element">
-            <img src="image_movie/태극기휘날리며.jpg" alt="">
-            <div class ="title">태극기 휘날리며</div>
-            <div class="make-year">2004 ・ 한국</div>
-            <span>평균</span> <i class="fa-regular fa-star-half-stroke"></i> <span>3.5</span>
+    <div class="jangre" style="padding-top: 100px;">전쟁 영화</div>
+    <div class="slider-container" id="slider-container">
+        <div class="slider-wrapper">
+            <div class="slide">
+                <div class="element">
+                    <img src="image_movie/태극기휘날리며.jpg" alt="">
+                    <div class ="title">태극기 휘날리며</div>
+                    <div class="make-year">2004 ・ 한국</div>
+                    <span>평균</span> <i class="fa-regular fa-star-half-stroke"></i> <span>3.5</span>
+                </div>
+                </a>
+                <div class="element">
+                    <img src="image_movie/태극기휘날리며.jpg" alt="">
+                    <div class ="title">태극기 휘날리며</div>
+                    <div class="make-year">2004 ・ 한국</div>
+                    <span>평균</span> <i class="fa-regular fa-star-half-stroke"></i> <span>3.5</span>
+                </div>
+                <div class="element">
+                    <img src="image_movie/태극기휘날리며.jpg" alt="">
+                    <div class ="title">태극기 휘날리며</div>
+                    <div class="make-year">2004 ・ 한국</div>
+                    <span>평균</span> <i class="fa-regular fa-star-half-stroke"></i> <span>3.5</span>
+                </div>
+                <div class="element">
+                    <img src="image_movie/태극기휘날리며.jpg" alt="">
+                    <div class ="title">태극기 휘날리며</div>
+                    <div class="make-year">2004 ・ 한국</div>
+                    <span>평균</span> <i class="fa-regular fa-star-half-stroke"></i> <span>3.5</span>
+                </div>
+                <div class="element">
+                    <img src="image_movie/태극기휘날리며.jpg" alt="">
+                    <div class ="title">태극기 휘날리며</div>
+                    <div class="make-year">2004 ・ 한국</div>
+                    <span>평균</span> <i class="fa-regular fa-star-half-stroke"></i> <span>3.5</span>
+                </div>
+                <div class="element">
+                    <img src="image_movie/태극기휘날리며.jpg" alt="">
+                    <div class ="title">태극기 휘날리며</div>
+                    <div class="make-year">2004 ・ 한국</div>
+                    <span>평균</span> <i class="fa-regular fa-star-half-stroke"></i> <span>3.5</span>
+                </div>
+                <div class="element">
+                    <img src="image_movie/태극기휘날리며.jpg" alt="">
+                    <div class ="title">태극기 휘날리며</div>
+                    <div class="make-year">2004 ・ 한국</div>
+                    <span>평균</span> <i class="fa-regular fa-star-half-stroke"></i> <span>3.5</span>
+                </div>
+                <div class="element">
+                    <img src="image_movie/태극기휘날리며.jpg" alt="">
+                    <div class ="title">태극기 휘날리며</div>
+                    <div class="make-year">2004 ・ 한국</div>
+                    <span>평균</span> <i class="fa-regular fa-star-half-stroke"></i> <span>3.5</span>
+                </div>
+                <div class="element">
+                    <img src="image_movie/태극기휘날리며.jpg" alt="">
+                    <div class ="title">태극기 휘날리며</div>
+                    <div class="make-year">2004 ・ 한국</div>
+                    <span>평균</span> <i class="fa-regular fa-star-half-stroke"></i> <span>3.5</span>
+                </div>
+            </div>
         </div>
-        <div class="element">
-            <img src="image_movie/태극기휘날리며.jpg" alt="">
-            <div class ="title">태극기 휘날리며</div>
-            <div class="make-year">2004 ・ 한국</div>
-            <span>평균</span> <i class="fa-regular fa-star-half-stroke"></i> <span>3.5</span>
+        <div class="slider-controls">
+            <button onclick="slideToLeft(this)">&lt;</button>
+            <button onclick="slideToRight(this)">&gt;</button>
         </div>
     </div>
 </body>
+<script>
+    const slider = document.getElementById('slider');
+    let position = 0;
+    let slider_width = slider.lastElementChild.getBoundingClientRect().right - slider.firstElementChild.getBoundingClientRect().left + 100;
+    let width = slider_width - window.innerWidth;
+    let move = width/3;
 
+//     function setSlideWidth() {
+//     const slides = slider.getElementsByClassName('slide');
+//     slide_width = slides[slides.length - 1].getBoundingClientRect().right - slides[0].getBoundingClientRect().left;
+//     slider.style.width = slide_width + 'px';
+// }
+
+    console.log(slider_width);
+    console.log(window.innerWidth);
+    
+    function slideToLeft(buttonElement) {
+        position += move;
+        if (position > 30) {
+            position = -width;
+        }
+        buttonElement.parentElement.parentElement.firstElementChild.style.transform = `translateX(${position}px)`;
+        // slider.style.transform = `translateX(${position}px)`;
+    }
+
+    function slideToRight(buttonElement) {
+        position -= move;
+        console.log(position);
+        if (position < -(width)) {
+            position = 0;
+        }
+        buttonElement.parentElement.parentElement.firstElementChild.style.transform = `translateX(${position}px)`;
+        // slider.style.transform = `translateX(${position}px)`;
+    }
+</script>
+    
 </html>

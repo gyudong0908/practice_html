@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Example</title>
+    <style>
+        .slider-container {
+            position: relative;
+            width: 320px;
+            overflow: hidden;
+        }
+        .slider-wrapper {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .slide {
+            flex: 0 0 320px;
+            display: flex;
+        }
+        .content {
+            height: 200px;
+            margin: 10px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+        }
+        .slider-controls {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .slider-controls button {
+            padding: 5px 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #ddd;
+            border: none;
+            border-radius: 5px;
+        }
+        .slider-controls button:hover {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slider-wrapper" id="slider">
+            <div class="slide">
+                <div class="content">Slide 1 - Content 1</div>
+                <div class="content">Slide 1 - Content 1</div>
+                <div class="content">Slide 1 - Content 1</div>
+            </div>
+            <div class="slide">
+                <div class="content">Slide 2 - Content 1</div>
+            </div>
+            <div class="slide">
+                <div class="content">Slide 3 - Content 1</div>
+            </div>
+            <!-- Add more slides with single content here -->
+        </div>
+        <div class="slider-controls">
+            <button onclick="slideToLeft()">&lt;</button>
+            <button onclick="slideToRight()">&gt;</button>
+        </div>
+    </div>
+
+    <script>
+        const slider = document.getElementById('slider');
+        let position = 0;
+
+        function slideToLeft() {
+            position += 320;
+            if (position > 0) {
+                position = -((slider.children.length - 1) * 320);
+            }
+            slider.style.transform = `translateX(${position}px)`;
+        }
+
+        function slideToRight() {
+            position -= 320;
+            if (position < -((slider.children.length - 1) * 320)) {
+                position = 0;
+            }
+            slider.style.transform = `translateX(${position}px)`;
+        }
+    </script>
+</body>
+</html>
