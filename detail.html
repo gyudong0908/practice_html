@@ -74,6 +74,18 @@
             width: 20%;
             padding-right: 20px;
         }
+        .review-div{
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid gray;
+            flex-wrap: wrap;
+        }
+        .actor-div{
+            display: flex; 
+            text-align: center; 
+            padding-top: 10px;
+        }
+
     </style>
 </head>
 <body>
@@ -81,9 +93,9 @@
         <div style="display: flex; flex-wrap: wrap;">
             <img src="image_movie/태극기휘날리며.jpg" alt="" class ="main-photo" id = "main-photo">
             <div style="width: 70%;" id = "main">
-                <h1>태극기 휘날리며</h1>
-                <div style="display: flex; align-items: center; border-bottom: 1px solid gray; flex-wrap: wrap;">
-                    <div class="star" style="display: flex;">
+                <h1 style="padding-left: 20px;">태극기 휘날리며</h1>
+                <div class="review-div">
+                    <div style="display: flex;">
                         <h1><i class="fa-solid fa-star"></i></h1>
                         <h1><i class="fa-solid fa-star"></i></h1>
                         <h1><i class="fa-solid fa-star"></i></h1>
@@ -110,12 +122,12 @@
             </div>
         </div>
 
-        <section class="actor" style="clear: left;">
+        <section class="actor">
             <h2 style="margin-bottom: 0px; padding-top: 100px;">출연/제작</h2>
             <div class="actor-1">
                 <ul style="display: flex; flex-wrap: wrap; justify-content: flex-start;">
                     <li>
-                        <div style="display: flex; text-align: center; padding-top: 10px;">
+                        <div class="actor-div">
                             <img src="image_detail/원빈.jpg" class="photo">
                             <div>
                                 <div class= "actor-descript"> 원빈1</div>
@@ -124,7 +136,7 @@
                         </div>
                     </li>
                     <li>
-                        <div style="display: flex; text-align: center; padding-top: 10px;">
+                        <div class="actor-div">
                             <img src="image_detail/원빈.jpg" class="photo">
                             <div>
                                 <div class= "actor-descript"> 원빈2</div>
@@ -133,73 +145,73 @@
                         </div>
                     </li>
                     <li>
-                        <div style="display: flex; text-align: center; padding-top: 10px;">
+                        <div class="actor-div">
                             <img src="image_detail/원빈.jpg" class="photo">
                             <div>
-                                <div class= "actor-descript"> 원빈3</div>
+                                <div class= "actor-descript"> 원빈1</div>
                                 <div class= "actor-descript">주연/이진석</div>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <div style="display: flex; text-align: center; padding-top: 10px;">
+                        <div class="actor-div">
                             <img src="image_detail/원빈.jpg" class="photo">
                             <div>
-                                <div class= "actor-descript"> 원빈4</div>
+                                <div class= "actor-descript"> 원빈1</div>
                                 <div class= "actor-descript">주연/이진석</div>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <div style="display: flex; text-align: center; padding-top: 10px;">
+                        <div class="actor-div">
                             <img src="image_detail/원빈.jpg" class="photo">
                             <div>
-                                <div class= "actor-descript"> 원빈5</div>
+                                <div class= "actor-descript"> 원빈1</div>
                                 <div class= "actor-descript">주연/이진석</div>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <div style="display: flex; text-align: center; padding-top: 10px;">
+                        <div class="actor-div">
                             <img src="image_detail/원빈.jpg" class="photo">
                             <div>
-                                <div class= "actor-descript"> 원빈6</div>
+                                <div class= "actor-descript"> 원빈1</div>
                                 <div class= "actor-descript">주연/이진석</div>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <div style="display: flex; text-align: center; padding-top: 10px;">
+                        <div class="actor-div">
                             <img src="image_detail/원빈.jpg" class="photo">
                             <div>
-                                <div class= "actor-descript"> 원빈7</div>
+                                <div class= "actor-descript"> 원빈1</div>
                                 <div class= "actor-descript">주연/이진석</div>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <div style="display: flex; text-align: center; padding-top: 10px;">
+                        <div class="actor-div">
                             <img src="image_detail/원빈.jpg" class="photo">
                             <div>
-                                <div class= "actor-descript"> 원빈8</div>
+                                <div class= "actor-descript"> 원빈1</div>
                                 <div class= "actor-descript">주연/이진석</div>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <div style="display: flex; text-align: center; padding-top: 10px;">
+                        <div class="actor-div">
                             <img src="image_detail/원빈.jpg" class="photo">
                             <div>
-                                <div class= "actor-descript"> 원빈9</div>
+                                <div class= "actor-descript"> 원빈1</div>
                                 <div class= "actor-descript">주연/이진석</div>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <div style="display: flex; text-align: center; padding-top: 10px;">
+                        <div class="actor-div">
                             <img src="image_detail/원빈.jpg" class="photo">
                             <div>
-                                <div class= "actor-descript"> 원빈10</div>
+                                <div class= "actor-descript"> 원빈1</div>
                                 <div class= "actor-descript">주연/이진석</div>
                             </div>
                         </div>
@@ -265,7 +277,7 @@
 </body>
 <script>
       function adjustDisplay() {
-        if(window.innerWidth < 1430)
+        if(window.innerWidth < 1000)
         {
             document.getElementById('main-photo').style.width = 80 + '%';
             document.getElementById('main').style.width = 95 + '%';
